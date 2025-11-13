@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelos - MotoPower</title>
+  <link rel="stylesheet" href="/visual.css/servicios.css">
+</head>
+<body>
+
+  <header>
+    <h1 class="logo">🏍️ MotoPower</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html" class="activo">Modelos</a></li>
+        <li><a href="contactos.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="productos">
+    <h2>Nuestros Modelos</h2>
+    <div class="grid">
+      <div class="producto">
+        <img src="imagenes/5852733-1.jpg" alt="Moto Sport">
+        <p>Moto Sport 500cc - $60,000</p>
+        <button onclick="agregarAlCarrito('Moto Sport 500cc', 60000)">Agregar</button>
+      </div>
+
+      <div class="producto">
+        <img src="imagenes/5934033-1.jpg" alt="Moto Cruiser">
+        <p>Moto Cruiser 800cc - $80,000</p>
+        <button onclick="agregarAlCarrito('Moto Cruiser 800cc', 80000)">Agregar</button>
+      </div>
+
+      <div class="producto">
+        <img src="imagenes/5934123-1.jpg" alt="Moto Touring">
+        <p>Moto Touring 1000cc - $100,000</p>
+        <button onclick="agregarAlCarrito('Moto Touring 1000cc', 100000)">Agregar</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="carrito">
+    <h3>Carrito de Compras</h3>
+    <ul id="listaCarrito"></ul>
+    <p><strong>Total: </strong><span id="totalCarrito">$0</span></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MotoPower. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    let carrito = [];
+    let total = 0;
+
+    function agregarAlCarrito(modelo, precio) {
+      carrito.push({ modelo, precio });
+      total += precio;
+
+      // Actualizar el carrito en la UI
+      actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+      // Mostrar productos en el carrito
+      const listaCarrito = document.getElementById('listaCarrito');
+      listaCarrito.innerHTML = ''; // Limpiar el carrito actual
+      carrito.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.modelo} - $${item.precio}`;
+        listaCarrito.appendChild(li);
+      });
+
+      // Actualizar total
+      document.getElementById('totalCarrito').textContent = `$${total}`;
+    }
+  </script>
+
+</body>
+</html>

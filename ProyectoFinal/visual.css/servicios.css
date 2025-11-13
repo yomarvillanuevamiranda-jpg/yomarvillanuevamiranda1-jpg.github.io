@@ -1,0 +1,114 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #111;
+    color: #f5f5f5;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #111;
+  }
+  
+  .logo {
+    font-size: 2em;
+    color: #ff3c00;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover,
+  nav a.activo {
+    color: #ff3c00;
+  }
+  
+  .productos {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .productos h2 {
+    font-size: 2.5em;
+    color: #ff3c00;
+  }
+  
+  .grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .producto {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 60, 0, 0.3);
+    transition: transform 0.3s;
+  }
+  
+  .producto:hover {
+    transform: translateY(-10px);
+  }
+  
+  .producto img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  button {
+    background-color: #ff3c00;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #e53200;
+  }
+  
+  #carrito {
+    padding: 50px;
+    background-color: #222;
+    text-align: center;
+  }
+  
+  #carrito ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #carrito p {
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #888;
+    margin-top: 50px;
+  }
+  
